@@ -1,0 +1,266 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Section recherche */
+.search-section {
+  margin-bottom: 30px;
+}
+
+.search-section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.search-bar {
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.results-count {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Liste des suggestions */
+.suggestions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.suggestion-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.category {
+  background: #667eea;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status.acceptee {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.refusee {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status.en_attente {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.card-body p {
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Boutons d'action */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-like {
+  background: #667eea;
+  color: white;
+}
+
+.btn-like:hover {
+  background: #5568d3;
+  transform: scale(1.05);
+}
+
+.btn-favorite {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-favorite:hover {
+  background: #ffb300;
+  transform: scale(1.05);
+}
+
+/* Message pour suggestions refusées */
+.card-actions-disabled {
+  padding: 15px;
+  background: #f8d7da;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.card-actions-disabled p {
+  margin: 0;
+  color: #721c24;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Pas de résultats */
+.no-results {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.no-results p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Section des favoris */
+.favorites-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.favorites-section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  transition: transform 0.3s;
+}
+
+.favorite-item:hover {
+  transform: translateX(5px);
+}
+
+.favorite-title {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.favorite-category {
+  color: #666;
+  font-size: 0.9rem;
+  background: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .suggestions-list {
+    grid-template-columns: 1fr;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .favorite-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
