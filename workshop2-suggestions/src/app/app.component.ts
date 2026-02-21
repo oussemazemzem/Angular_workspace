@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ListSuggestionComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
